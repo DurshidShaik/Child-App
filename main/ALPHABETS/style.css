@@ -1,0 +1,318 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+html,
+body {
+  width: 100%;
+  height: 100%;
+  background-color: blueviolet;
+}
+a {
+  text-decoration: none;
+}
+h1 {
+  text-align: center;
+  font-family: "Honk", system-ui;
+  font-size: 70px;
+}
+.MENU-BTN {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  margin-top: 20px;
+}
+.MENU-BTN button {
+  cursor: pointer;
+  padding: 8px 30px;
+  border-radius: 5px;
+  background-color: black;
+  font-size: 15px;
+  color: white;
+  border: 1px solid white;
+  font-family: "poppins";
+  box-shadow: 0 0 15px #000;
+}
+.MENU-BTN button:hover {
+  background-color: white;
+  color: black;
+  border: 1px solid black;
+}
+.MENU-BTN button:active {
+  box-shadow: 0 0 25px #000;
+}
+.MENU-BTN button a {
+  text-decoration: none;
+  color: #fff;
+}
+.MENU-BTN button a:hover {
+  color: black;
+}
+.alphabets {
+  position: absolute;
+  width: 50%;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  filter: drop-shadow(10px 10px 15px #000);
+}
+.game {
+  position: absolute;
+  width: 90%;
+  height: 400px;
+  /* border: 2px solid black; */
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  transition: 0.5s;
+}
+.game .left {
+  width: 60%;
+  height: 400px;
+  box-shadow: 0 0 15px #000;
+  background-color: blueviolet;
+  display: flex;
+  flex-wrap: wrap;
+
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.game .left .child {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  /*   border: 1px solid black; */
+  margin: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 5px #000;
+}
+.game .left .child h3 {
+  font-size: 30px;
+  font-family: "poppins";
+}
+.game .right {
+  width: 30%;
+  height: 400px;
+  box-shadow: 0 0 15px #000;
+  background-color: blueviolet;
+}
+.game .right i {
+  float: right;
+  color: black;
+  padding: 10px;
+  font-size: 30px;
+  cursor: pointer;
+}
+.val {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.game .right h2 {
+  font-size: 120px;
+  padding-top: 100px;
+  font-family: "poppins";
+}
+.correct {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  /* border: 2px solid white; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 10px #000;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  background-color: blueviolet;
+  transition: 0.3s;
+}
+.correct img {
+  width: 100px;
+  height: 100px;
+}
+.wrong {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  /* border: 2px solid white; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 10px #000;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  background-color: blueviolet;
+  transition: 0.3s;
+}
+.wrong img {
+  width: 100px;
+  height: 100px;
+}
+.rules-game {
+  width: 80%;
+  height: 200px;
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: blueviolet;
+  box-shadow: 0 0 10px #000;
+}
+.rules-game i {
+  float: right;
+  font-size: 25px;
+  padding: 10px;
+  cursor: pointer;
+}
+.rules-game h3 {
+  font-size: 30px;
+  font-family: "Honk", system-ui;
+  text-align: center;
+}
+.rules-game ul {
+  margin-left: 30px;
+  color: white;
+}
+.rules-game ul li {
+  padding-top: 5px;
+  font-family: "poppins";
+}
+@media (max-width: 600px) {
+  h1 {
+    text-align: center;
+    font-family: "Honk", system-ui;
+    font-size: 40px;
+    margin-top: 30px;
+  }
+  .MENU-BTN {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-top: 30px;
+  }
+  .MENU-BTN button {
+    cursor: pointer;
+    padding: 5px 10px;
+    border-radius: 5px;
+    background-color: black;
+    font-size: 12px;
+    color: white;
+    border: 1px solid white;
+    font-family: "poppins";
+    box-shadow: 0 0 15px #000;
+  }
+  .alphabets {
+    position: absolute;
+    width: 90%;
+    top: 32%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    filter: drop-shadow(10px 10px 15px #000);
+  }
+  .game {
+    position: absolute;
+    width: 90%;
+    height: 400px;
+    /* border: 2px solid black; */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    transition: 0.5s;
+  }
+  .game .left {
+    width: 60%;
+    height: 400px;
+    box-shadow: 0 0 15px #000;
+    background-color: blueviolet;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+  }
+  .game .left .child {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 5px #000;
+  }
+  .game .left .child h3 {
+    font-size: 15px;
+    font-family: "poppins";
+  }
+  .game .right {
+    width: 30%;
+    height: 400px;
+    box-shadow: 0 0 15px #000;
+    background-color: blueviolet;
+  }
+  .game .right i {
+    float: right;
+    color: black;
+    padding: 10px;
+    font-size: 30px;
+    cursor: pointer;
+  }
+  .val {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .game .right h2 {
+    font-size: 100px;
+    padding-top: 100px;
+    padding-left: 40px;
+    font-family: "poppins";
+  }
+  .rules-game {
+    width: 80%;
+    height: 280px;
+    display: none;
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: blueviolet;
+    box-shadow: 0 0 10px #000;
+  }
+  .rules-game i {
+    float: right;
+    font-size: 25px;
+    padding: 10px;
+    cursor: pointer;
+  }
+  .rules-game h3 {
+    font-size: 30px;
+    font-family: "Honk", system-ui;
+    text-align: center;
+  }
+  .rules-game ul {
+    margin-left: 30px;
+    color: white;
+  }
+  .rules-game ul li {
+    padding-top: 5px;
+    font-family: "poppins";
+    font-size: 12px;
+  }
+}
